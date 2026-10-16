@@ -1,0 +1,13 @@
+{
+  "name": "code-sandbox",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": { "version": "21", "jdkDistro": "tem" },
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "hostRequirements": { "cpus": 4, "memory": "16gb" },
+  "postCreateCommand": "curl -fsSL https://claude.ai/install.sh | bash",
+  "forwardPorts": [5173, 8080]
+}
